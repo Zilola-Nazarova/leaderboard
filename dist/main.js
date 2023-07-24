@@ -21,11 +21,93 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `h1 {
-  background-color: blue;
-  color: brown;
+___CSS_LOADER_EXPORT___.push([module.id, `* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,sBAAsB;EACtB,YAAY;AACd","sourcesContent":["h1 {\n  background-color: blue;\n  color: brown;\n}\n"],"sourceRoot":""}]);
+
+.teko {
+  font-family: 'Teko', sans-serif;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  max-width: 1000px;
+  margin: auto;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  align-items: flex-start;
+  gap: 12%;
+  padding: 0 10%;
+}
+
+header {
+  padding: 10% 10% 5%;
+  padding-left: 5%;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 1em;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 3px 12px;
+  font-family: 'Poppins', sans-serif;
+}
+
+#board-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+ul,
+form {
+  margin-top: 15px;
+}
+
+ul {
+  height: 150px;
+  width: 100%;
+  border: 1px solid black;
+}
+
+input::placeholder {
+  font-family: 'Poppins', sans-serif;
+}
+
+#form-section h2 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input {
+  height: 1.6rem;
+  border: 1px solid black;
+  padding: 0 5px;
+}
+
+#submit-btn {
+  align-self: flex-end;
+}
+`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;EACV,sBAAsB;AACxB;;AAEA;EACE,+BAA+B;AACjC;;AAEA;EACE,kCAAkC;EAClC,iBAAiB;EACjB,YAAY;AACd;;AAEA;EACE,aAAa;EACb,8BAA8B;EAC9B,uBAAuB;EACvB,QAAQ;EACR,cAAc;AAChB;;AAEA;EACE,mBAAmB;EACnB,gBAAgB;AAClB;;AAEA;EACE,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,6BAA6B;EAC7B,uBAAuB;EACvB,iBAAiB;EACjB,kCAAkC;AACpC;;AAEA;EACE,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;EACnB,eAAe;AACjB;;AAEA;;EAEE,gBAAgB;AAClB;;AAEA;EACE,aAAa;EACb,WAAW;EACX,uBAAuB;AACzB;;AAEA;EACE,kCAAkC;AACpC;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,SAAS;AACX;;AAEA;EACE,cAAc;EACd,uBAAuB;EACvB,cAAc;AAChB;;AAEA;EACE,oBAAoB;AACtB","sourcesContent":["* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\n.teko {\r\n  font-family: 'Teko', sans-serif;\r\n}\r\n\r\nbody {\r\n  font-family: 'Poppins', sans-serif;\r\n  max-width: 1000px;\r\n  margin: auto;\r\n}\r\n\r\nmain {\r\n  display: grid;\r\n  grid-template-columns: 6fr 4fr;\r\n  align-items: flex-start;\r\n  gap: 12%;\r\n  padding: 0 10%;\r\n}\r\n\r\nheader {\r\n  padding: 10% 10% 5%;\r\n  padding-left: 5%;\r\n}\r\n\r\nh1 {\r\n  font-size: 4rem;\r\n  line-height: 1em;\r\n}\r\n\r\nh2 {\r\n  font-size: 1.5rem;\r\n}\r\n\r\nbutton {\r\n  background-color: transparent;\r\n  border: 1px solid black;\r\n  padding: 3px 12px;\r\n  font-family: 'Poppins', sans-serif;\r\n}\r\n\r\n#board-section {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  flex-wrap: wrap;\r\n}\r\n\r\nul,\r\nform {\r\n  margin-top: 15px;\r\n}\r\n\r\nul {\r\n  height: 150px;\r\n  width: 100%;\r\n  border: 1px solid black;\r\n}\r\n\r\ninput::placeholder {\r\n  font-family: 'Poppins', sans-serif;\r\n}\r\n\r\n#form-section h2 {\r\n  text-align: center;\r\n}\r\n\r\nform {\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 20px;\r\n}\r\n\r\ninput {\r\n  height: 1.6rem;\r\n  border: 1px solid black;\r\n  padding: 0 5px;\r\n}\r\n\r\n#submit-btn {\r\n  align-self: flex-end;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -470,16 +552,6 @@ function styleTagTransform(css, styleElement) {
 }
 module.exports = styleTagTransform;
 
-/***/ }),
-
-/***/ "./src/assets/refresh.svg":
-/*!********************************!*\
-  !*** ./src/assets/refresh.svg ***!
-  \********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "refresh.svg";
-
 /***/ })
 
 /******/ 	});
@@ -533,18 +605,6 @@ module.exports = __webpack_require__.p + "refresh.svg";
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -561,29 +621,6 @@ module.exports = __webpack_require__.p + "refresh.svg";
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
-/******/ 		var scriptUrl;
-/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		var document = __webpack_require__.g.document;
-/******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript)
-/******/ 				scriptUrl = document.currentScript.src;
-/******/ 			if (!scriptUrl) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) {
-/******/ 					var i = scripts.length - 1;
-/******/ 					while (i > -1 && !scriptUrl) scriptUrl = scripts[i--].src;
-/******/ 				}
-/******/ 			}
-/******/ 		}
-/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
-/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
-/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl;
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/nonce */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nc = undefined;
@@ -598,12 +635,7 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
-/* harmony import */ var _assets_refresh_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/refresh.svg */ "./src/assets/refresh.svg");
 
-
-const user = 'Zilola Nazarovas';
-document.querySelector('h1').textContent = user;
-document.getElementById('refresh-icon').src = _assets_refresh_svg__WEBPACK_IMPORTED_MODULE_1__;
 })();
 
 /******/ })()
