@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.teko {
+  font-family: 'Teko', sans-serif;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  max-width: 1000px;
+  margin: auto;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  align-items: flex-start;
+  gap: 12%;
+  padding: 0 10%;
+}
+
+header {
+  padding: 10% 10% 5%;
+  padding-left: 5%;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 1em;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 3px 12px;
+  font-family: 'Poppins', sans-serif;
+}
+
+#board-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+ul,
+form {
+  margin-top: 15px;
+}
+
+ul {
+  height: 150px;
+  width: 100%;
+  border: 1px solid black;
+}
+
+input::placeholder {
+  font-family: 'Poppins', sans-serif;
+}
+
+#form-section h2 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input {
+  height: 1.6rem;
+  border: 1px solid black;
+  padding: 0 5px;
+}
+
+#submit-btn {
+  align-self: flex-end;
+}
