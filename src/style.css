@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #5e574b;
 }
 
 .teko {
@@ -12,6 +13,7 @@ body {
   font-family: 'Poppins', sans-serif;
   max-width: 1000px;
   margin: auto;
+  background-color: #f7f4ee;
 }
 
 main {
@@ -36,9 +38,14 @@ h2 {
   font-size: 1.5rem;
 }
 
+input,
+button,
+ul {
+  border: 1px solid rgb(168, 146, 128);
+}
+
 button {
   background-color: transparent;
-  border: 1px solid black;
   padding: 3px 12px;
   font-family: 'Poppins', sans-serif;
 }
@@ -56,9 +63,22 @@ form {
 }
 
 ul {
-  height: 150px;
   width: 100%;
-  border: 1px solid black;
+  list-style: none;
+  /* padding: 5px 0 0; */
+}
+
+li {
+  font-size: 0.8rem;
+  padding: 5px 11px;
+}
+
+li:nth-of-type(even) {
+  background-color: #fffdf9;
+}
+
+li .player-score {
+  float: right;
 }
 
 input::placeholder {
@@ -76,7 +96,6 @@ form {
 
 input {
   height: 1.6rem;
-  border: 1px solid black;
   padding: 0 5px;
   margin-bottom: 4px;
 }
