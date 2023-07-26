@@ -72,7 +72,7 @@ The repo was documented in a professional way. The Website is simple and dynamic
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- use this link to visit and try the [Leaderboard app](#)(the link will be available after completing the project on 27.07.2023).;
+- use this link to visit and try the [Leaderboard app](https://zilola-nazarova.github.io/leaderboard/);
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -123,6 +123,9 @@ To make Webpack generate its own index.html file run the following command:
 Install the loaders in order to import a CSS file from within a JavaScript module by running:
 > npm install --save-dev style-loader css-loader
 
+To be able to deploy the project you need to install 'gh-pages':
+> npm install gh-pages --save-dev
+
 You might want to have linters installed in your local env to successfully run and modify this project:
 
 - Webhint installation. Run the following command:
@@ -156,7 +159,10 @@ There are no test provided for this project, but you can check linter errors by 
 
 ### Deployment
 
-Visit the Leaderboard app [here](#)(the link will be available after completing the project on 27.07.2023).
+Visit the Leaderboard app [here](https://zilola-nazarova.github.io/leaderboard/).
+
+To deploy modified version of this repo run the following command:
+> npm run deploy
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
