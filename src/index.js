@@ -26,12 +26,14 @@ submitBtn.addEventListener('click', async (event) => {
   const name = document.getElementById('user-name');
   const score = document.getElementById('user-score');
 
-  if (name.value && score.value !== '') {
-    await addScore(name.value, score.value);
+  if (!/^[0-9]+$/.test(score.value)) {
+    showError('score', 'Please, enter a number');
   } else if (name.value === '') {
     showError('name', 'Please, enter your name');
   } else if (score.value === '') {
     showError('score', 'Please, enter your score');
+  } else if (name.value && score.value !== '') {
+    await addScore(name.value, score.value);
   }
 });
 
