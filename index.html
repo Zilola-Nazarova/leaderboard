@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+ rel="stylesheet">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&display=swap"
+ rel="stylesheet">
+  <title>Leaderboard</title>
+<script defer src="main.js"></script></head>
+<body>
+  <header>
+    <h1 class="teko">Leaderboard</h1>
+  </header>
+
+  <main>
+    <section id="board-section">
+      <h2>Recent scores</h2>
+      <button type="button" id="refresh-btn">Refresh</button>
+      <ul id="score-list">
+        <!-- <li> elements will be created dinamically by JavaScript -->
+      </ul>
+    </section>
+    <section id="form-section">
+      <h2>Add your score</h2>
+      <form>
+        <input type="text" id="user-name" name="user-name" placeholder="Your name">
+        <span id="name-error"></span>
+        <input type="text" id="user-score" name="score" placeholder="Your score">
+        <span id="score-error"></span>
+        <button type="button" id="submit-btn">Submit</button>
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>
