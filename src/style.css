@@ -72,15 +72,27 @@ input::placeholder {
 form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
 input {
   height: 1.6rem;
   border: 1px solid black;
   padding: 0 5px;
+  margin-bottom: 4px;
 }
 
 #submit-btn {
   align-self: flex-end;
+}
+
+form span {
+  display: block;
+  height: 1rem;
+  font-size: 0.7rem;
+  opacity: 0;
+  margin-bottom: 12px;
+}
+
+form span.show {
+  opacity: 1;
 }
