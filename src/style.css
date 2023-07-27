@@ -74,6 +74,7 @@ form {
 ul {
   width: 100%;
   list-style: none;
+  min-height: 2rem;
 }
 
 li {
@@ -92,6 +93,8 @@ li .player-score {
 
 #form-section {
   margin-bottom: 1.5rem;
+  width: 80%;
+  max-width: 300px;
 }
 
 input::placeholder {
@@ -155,14 +158,21 @@ footer img {
 
   main {
     flex-direction: row;
-    justify-content: center;
-    gap: 15%;
+    align-items: flex-start;
+    justify-content: space-around;
+    /* gap: 15%; */
     padding: 3rem;
   }
 
   #board-section {
-    width: unset;
+    width: 45%;
+    max-width: 500px;
     margin: unset;
+  }
+
+  #form-section {
+    width: 35%;
+    max-width: 300px;
   }
 
   h1 {
