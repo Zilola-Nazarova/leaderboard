@@ -204,43 +204,50 @@ ___CSS_LOADER_EXPORT___.push([module.id, `* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #5e574b;
 }
 
-.teko {
-  font-family: 'Teko', sans-serif;
+.mulish {
+  font-family: 'Mulish', sans-serif;
+  text-transform: uppercase;  
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  max-width: 1000px;
-  margin: auto;
+  max-width: 1200px;
+  background-color: #f7f4ee;
 }
 
 main {
-  display: grid;
-  grid-template-columns: 6fr 4fr;
-  align-items: flex-start;
-  gap: 12%;
-  padding: 0 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0.8rem 0.8rem;
 }
 
 header {
-  padding: 10% 10% 5%;
-  padding-left: 5%;
+  padding: 2rem 0.8rem 1.8rem;
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 2.5rem;
   line-height: 1em;
+  text-align: center;
+  font-weight: 200;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+input,
+button,
+ul {
+  border: 1px solid #b4ae9e;
 }
 
 button {
   background-color: transparent;
-  border: 1px solid black;
   padding: 3px 12px;
   font-family: 'Poppins', sans-serif;
 }
@@ -250,6 +257,7 @@ button {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 2.5rem;
 }
 
 ul,
@@ -258,17 +266,26 @@ form {
 }
 
 ul {
-  height: 150px;
   width: 100%;
-  border: 1px solid black;
+  list-style: none;
+}
+
+li {
+  font-size: 0.8rem;
+  padding: 5px 11px;
+  font-family: 'Poppins', sans-serif;
+}
+
+li:nth-of-type(even) {
+  background-color: #fffdf9;
+}
+
+li .player-score {
+  float: right;
 }
 
 input::placeholder {
   font-family: 'Poppins', sans-serif;
-}
-
-#form-section h2 {
-  text-align: center;
 }
 
 form {
@@ -278,7 +295,6 @@ form {
 
 input {
   height: 1.6rem;
-  border: 1px solid black;
   padding: 0 5px;
   margin-bottom: 4px;
 }
@@ -297,7 +313,17 @@ form span {
 
 form span.show {
   opacity: 1;
-}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;EACV,sBAAsB;AACxB;;AAEA;EACE,+BAA+B;AACjC;;AAEA;EACE,kCAAkC;EAClC,iBAAiB;EACjB,YAAY;AACd;;AAEA;EACE,aAAa;EACb,8BAA8B;EAC9B,uBAAuB;EACvB,QAAQ;EACR,cAAc;AAChB;;AAEA;EACE,mBAAmB;EACnB,gBAAgB;AAClB;;AAEA;EACE,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,6BAA6B;EAC7B,uBAAuB;EACvB,iBAAiB;EACjB,kCAAkC;AACpC;;AAEA;EACE,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;EACnB,eAAe;AACjB;;AAEA;;EAEE,gBAAgB;AAClB;;AAEA;EACE,aAAa;EACb,WAAW;EACX,uBAAuB;AACzB;;AAEA;EACE,kCAAkC;AACpC;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,cAAc;EACd,uBAAuB;EACvB,cAAc;EACd,kBAAkB;AACpB;;AAEA;EACE,oBAAoB;AACtB;;AAEA;EACE,cAAc;EACd,YAAY;EACZ,iBAAiB;EACjB,UAAU;EACV,mBAAmB;AACrB;;AAEA;EACE,UAAU;AACZ","sourcesContent":["* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\n.teko {\r\n  font-family: 'Teko', sans-serif;\r\n}\r\n\r\nbody {\r\n  font-family: 'Poppins', sans-serif;\r\n  max-width: 1000px;\r\n  margin: auto;\r\n}\r\n\r\nmain {\r\n  display: grid;\r\n  grid-template-columns: 6fr 4fr;\r\n  align-items: flex-start;\r\n  gap: 12%;\r\n  padding: 0 10%;\r\n}\r\n\r\nheader {\r\n  padding: 10% 10% 5%;\r\n  padding-left: 5%;\r\n}\r\n\r\nh1 {\r\n  font-size: 4rem;\r\n  line-height: 1em;\r\n}\r\n\r\nh2 {\r\n  font-size: 1.5rem;\r\n}\r\n\r\nbutton {\r\n  background-color: transparent;\r\n  border: 1px solid black;\r\n  padding: 3px 12px;\r\n  font-family: 'Poppins', sans-serif;\r\n}\r\n\r\n#board-section {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  flex-wrap: wrap;\r\n}\r\n\r\nul,\r\nform {\r\n  margin-top: 15px;\r\n}\r\n\r\nul {\r\n  height: 150px;\r\n  width: 100%;\r\n  border: 1px solid black;\r\n}\r\n\r\ninput::placeholder {\r\n  font-family: 'Poppins', sans-serif;\r\n}\r\n\r\n#form-section h2 {\r\n  text-align: center;\r\n}\r\n\r\nform {\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\ninput {\r\n  height: 1.6rem;\r\n  border: 1px solid black;\r\n  padding: 0 5px;\r\n  margin-bottom: 4px;\r\n}\r\n\r\n#submit-btn {\r\n  align-self: flex-end;\r\n}\r\n\r\nform span {\r\n  display: block;\r\n  height: 1rem;\r\n  font-size: 0.7rem;\r\n  opacity: 0;\r\n  margin-bottom: 12px;\r\n}\r\n\r\nform span.show {\r\n  opacity: 1;\r\n}"],"sourceRoot":""}]);
+}
+
+@media only screen and (min-width: 768px) {
+
+  body {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+}
+`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;EACV,sBAAsB;EACtB,cAAc;AAChB;;AAEA;EACE,iCAAiC;EACjC,yBAAyB;AAC3B;;AAEA;EACE,iBAAiB;EACjB,yBAAyB;AAC3B;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;EACnB,2BAA2B;AAC7B;;AAEA;EACE,2BAA2B;AAC7B;;AAEA;EACE,iBAAiB;EACjB,gBAAgB;EAChB,kBAAkB;EAClB,gBAAgB;AAClB;;AAEA;EACE,iBAAiB;EACjB,mBAAmB;AACrB;;AAEA;;;EAGE,yBAAyB;AAC3B;;AAEA;EACE,6BAA6B;EAC7B,iBAAiB;EACjB,kCAAkC;AACpC;;AAEA;EACE,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;EACnB,eAAe;EACf,qBAAqB;AACvB;;AAEA;;EAEE,gBAAgB;AAClB;;AAEA;EACE,WAAW;EACX,gBAAgB;AAClB;;AAEA;EACE,iBAAiB;EACjB,iBAAiB;EACjB,kCAAkC;AACpC;;AAEA;EACE,yBAAyB;AAC3B;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,kCAAkC;AACpC;;AAEA;EACE,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,cAAc;EACd,cAAc;EACd,kBAAkB;AACpB;;AAEA;EACE,oBAAoB;AACtB;;AAEA;EACE,cAAc;EACd,YAAY;EACZ,iBAAiB;EACjB,UAAU;EACV,mBAAmB;AACrB;;AAEA;EACE,UAAU;AACZ;;AAEA;;EAEE;IACE,iBAAiB;IACjB,YAAY;EACd;;AAEF","sourcesContent":["* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n  color: #5e574b;\r\n}\r\n\r\n.mulish {\r\n  font-family: 'Mulish', sans-serif;\r\n  text-transform: uppercase;  \r\n}\r\n\r\nbody {\r\n  max-width: 1200px;\r\n  background-color: #f7f4ee;\r\n}\r\n\r\nmain {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  padding: 2rem 0.8rem 0.8rem;\r\n}\r\n\r\nheader {\r\n  padding: 2rem 0.8rem 1.8rem;\r\n}\r\n\r\nh1 {\r\n  font-size: 2.5rem;\r\n  line-height: 1em;\r\n  text-align: center;\r\n  font-weight: 200;\r\n}\r\n\r\nh2 {\r\n  font-size: 1.2rem;\r\n  letter-spacing: 2px;\r\n}\r\n\r\ninput,\r\nbutton,\r\nul {\r\n  border: 1px solid #b4ae9e;\r\n}\r\n\r\nbutton {\r\n  background-color: transparent;\r\n  padding: 3px 12px;\r\n  font-family: 'Poppins', sans-serif;\r\n}\r\n\r\n#board-section {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  flex-wrap: wrap;\r\n  margin-bottom: 2.5rem;\r\n}\r\n\r\nul,\r\nform {\r\n  margin-top: 15px;\r\n}\r\n\r\nul {\r\n  width: 100%;\r\n  list-style: none;\r\n}\r\n\r\nli {\r\n  font-size: 0.8rem;\r\n  padding: 5px 11px;\r\n  font-family: 'Poppins', sans-serif;\r\n}\r\n\r\nli:nth-of-type(even) {\r\n  background-color: #fffdf9;\r\n}\r\n\r\nli .player-score {\r\n  float: right;\r\n}\r\n\r\ninput::placeholder {\r\n  font-family: 'Poppins', sans-serif;\r\n}\r\n\r\nform {\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\ninput {\r\n  height: 1.6rem;\r\n  padding: 0 5px;\r\n  margin-bottom: 4px;\r\n}\r\n\r\n#submit-btn {\r\n  align-self: flex-end;\r\n}\r\n\r\nform span {\r\n  display: block;\r\n  height: 1rem;\r\n  font-size: 0.7rem;\r\n  opacity: 0;\r\n  margin-bottom: 12px;\r\n}\r\n\r\nform span.show {\r\n  opacity: 1;\r\n}\r\n\r\n@media only screen and (min-width: 768px) {\r\n\r\n  body {\r\n    max-width: 1200px;\r\n    margin: auto;\r\n  }\r\n\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -853,12 +879,14 @@ submitBtn.addEventListener('click', async event => {
   event.preventDefault();
   const name = document.getElementById('user-name');
   const score = document.getElementById('user-score');
-  if (name.value && score.value !== '') {
-    await (0,_modules_add_score_js__WEBPACK_IMPORTED_MODULE_1__["default"])(name.value, score.value);
+  if (!/^[0-9]+$/.test(score.value)) {
+    (0,_modules_show_error_js__WEBPACK_IMPORTED_MODULE_3__["default"])('score', 'Please, enter a number');
   } else if (name.value === '') {
     (0,_modules_show_error_js__WEBPACK_IMPORTED_MODULE_3__["default"])('name', 'Please, enter your name');
   } else if (score.value === '') {
     (0,_modules_show_error_js__WEBPACK_IMPORTED_MODULE_3__["default"])('score', 'Please, enter your score');
+  } else if (name.value && score.value !== '') {
+    await (0,_modules_add_score_js__WEBPACK_IMPORTED_MODULE_1__["default"])(name.value, score.value);
   }
 });
 
