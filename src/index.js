@@ -25,7 +25,7 @@ submitBtn.addEventListener('click', async (event) => {
   event.preventDefault();
   const name = document.getElementById('user-name');
   const score = document.getElementById('user-score');
-    
+
   if (name.value === '') {
     showError('name', 'Please, enter your name');
   } else if (score.value === '') {

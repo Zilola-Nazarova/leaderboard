@@ -160,7 +160,6 @@ footer img {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-around;
-    /* gap: 15%; */
     padding: 3rem;
   }
 
