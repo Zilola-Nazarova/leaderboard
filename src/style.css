@@ -12,6 +12,10 @@
 
 body {
   background-color: #f7f4ee;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 main {
@@ -56,6 +60,9 @@ button {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
   margin-bottom: 2.5rem;
 }
 
@@ -145,15 +152,18 @@ footer img {
   body {
     max-width: 1200px;
     margin: auto;
-    min-height: 100vh;
   }
 
   main {
     flex-direction: row;
     justify-content: center;
-    gap: 10%;
+    gap: 15%;
     padding: 3rem;
-    height: calc(100vh - 3.5rem - 7.3rem);
+  }
+
+  #board-section {
+    width: unset;
+    margin: unset;
   }
 
   h1 {
@@ -164,15 +174,5 @@ footer img {
 
   h2 {
     font-size: 1.4rem;
-  }
-
-  footer {
-    border-top: 1px solid #b4ae9e;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    height: 3.5rem;
-    max-width: 1200px;
-    margin: auto;
   }
 }
