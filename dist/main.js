@@ -209,12 +209,15 @@ ___CSS_LOADER_EXPORT___.push([module.id, `* {
 
 .mulish {
   font-family: 'Mulish', sans-serif;
-  text-transform: uppercase;  
+  text-transform: uppercase;
 }
 
 body {
-  max-width: 1200px;
   background-color: #f7f4ee;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 main {
@@ -226,6 +229,7 @@ main {
 
 header {
   padding: 2rem 0.8rem 1.8rem;
+  border-bottom: 1px solid #b4ae9e;
 }
 
 h1 {
@@ -236,7 +240,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   letter-spacing: 2px;
 }
 
@@ -248,6 +252,7 @@ ul {
 
 button {
   background-color: transparent;
+  text-transform: uppercase;
   padding: 3px 12px;
   font-family: 'Poppins', sans-serif;
 }
@@ -257,12 +262,15 @@ button {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
   margin-bottom: 2.5rem;
 }
 
 ul,
 form {
-  margin-top: 15px;
+  margin-top: 1.2rem;
 }
 
 ul {
@@ -284,6 +292,10 @@ li .player-score {
   float: right;
 }
 
+#form-section {
+  margin-bottom: 1.5rem;
+}
+
 input::placeholder {
   font-family: 'Poppins', sans-serif;
 }
@@ -299,6 +311,10 @@ input {
   margin-bottom: 4px;
 }
 
+input:focus {
+  outline: 2px solid #b4ae9e;
+}
+
 #submit-btn {
   align-self: flex-end;
 }
@@ -308,22 +324,60 @@ form span {
   height: 1rem;
   font-size: 0.7rem;
   opacity: 0;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 form span.show {
   opacity: 1;
 }
 
-@media only screen and (min-width: 768px) {
+footer {
+  padding: 0.8rem 0;
+  border-top: 1px solid #b4ae9e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
 
+footer a {
+  display: block;
+  height: 24px;
+}
+
+footer img {
+  color: #5e574b;
+}
+
+@media only screen and (min-width: 768px) {
   body {
     max-width: 1200px;
     margin: auto;
   }
 
+  main {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15%;
+    padding: 3rem;
+  }
+
+  #board-section {
+    width: unset;
+    margin: unset;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    text-align: left;
+    padding-left: 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
 }
-`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;EACV,sBAAsB;EACtB,cAAc;AAChB;;AAEA;EACE,iCAAiC;EACjC,yBAAyB;AAC3B;;AAEA;EACE,iBAAiB;EACjB,yBAAyB;AAC3B;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;EACnB,2BAA2B;AAC7B;;AAEA;EACE,2BAA2B;AAC7B;;AAEA;EACE,iBAAiB;EACjB,gBAAgB;EAChB,kBAAkB;EAClB,gBAAgB;AAClB;;AAEA;EACE,iBAAiB;EACjB,mBAAmB;AACrB;;AAEA;;;EAGE,yBAAyB;AAC3B;;AAEA;EACE,6BAA6B;EAC7B,iBAAiB;EACjB,kCAAkC;AACpC;;AAEA;EACE,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;EACnB,eAAe;EACf,qBAAqB;AACvB;;AAEA;;EAEE,gBAAgB;AAClB;;AAEA;EACE,WAAW;EACX,gBAAgB;AAClB;;AAEA;EACE,iBAAiB;EACjB,iBAAiB;EACjB,kCAAkC;AACpC;;AAEA;EACE,yBAAyB;AAC3B;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,kCAAkC;AACpC;;AAEA;EACE,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,cAAc;EACd,cAAc;EACd,kBAAkB;AACpB;;AAEA;EACE,oBAAoB;AACtB;;AAEA;EACE,cAAc;EACd,YAAY;EACZ,iBAAiB;EACjB,UAAU;EACV,mBAAmB;AACrB;;AAEA;EACE,UAAU;AACZ;;AAEA;;EAEE;IACE,iBAAiB;IACjB,YAAY;EACd;;AAEF","sourcesContent":["* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n  color: #5e574b;\r\n}\r\n\r\n.mulish {\r\n  font-family: 'Mulish', sans-serif;\r\n  text-transform: uppercase;  \r\n}\r\n\r\nbody {\r\n  max-width: 1200px;\r\n  background-color: #f7f4ee;\r\n}\r\n\r\nmain {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  padding: 2rem 0.8rem 0.8rem;\r\n}\r\n\r\nheader {\r\n  padding: 2rem 0.8rem 1.8rem;\r\n}\r\n\r\nh1 {\r\n  font-size: 2.5rem;\r\n  line-height: 1em;\r\n  text-align: center;\r\n  font-weight: 200;\r\n}\r\n\r\nh2 {\r\n  font-size: 1.2rem;\r\n  letter-spacing: 2px;\r\n}\r\n\r\ninput,\r\nbutton,\r\nul {\r\n  border: 1px solid #b4ae9e;\r\n}\r\n\r\nbutton {\r\n  background-color: transparent;\r\n  padding: 3px 12px;\r\n  font-family: 'Poppins', sans-serif;\r\n}\r\n\r\n#board-section {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  flex-wrap: wrap;\r\n  margin-bottom: 2.5rem;\r\n}\r\n\r\nul,\r\nform {\r\n  margin-top: 15px;\r\n}\r\n\r\nul {\r\n  width: 100%;\r\n  list-style: none;\r\n}\r\n\r\nli {\r\n  font-size: 0.8rem;\r\n  padding: 5px 11px;\r\n  font-family: 'Poppins', sans-serif;\r\n}\r\n\r\nli:nth-of-type(even) {\r\n  background-color: #fffdf9;\r\n}\r\n\r\nli .player-score {\r\n  float: right;\r\n}\r\n\r\ninput::placeholder {\r\n  font-family: 'Poppins', sans-serif;\r\n}\r\n\r\nform {\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\ninput {\r\n  height: 1.6rem;\r\n  padding: 0 5px;\r\n  margin-bottom: 4px;\r\n}\r\n\r\n#submit-btn {\r\n  align-self: flex-end;\r\n}\r\n\r\nform span {\r\n  display: block;\r\n  height: 1rem;\r\n  font-size: 0.7rem;\r\n  opacity: 0;\r\n  margin-bottom: 12px;\r\n}\r\n\r\nform span.show {\r\n  opacity: 1;\r\n}\r\n\r\n@media only screen and (min-width: 768px) {\r\n\r\n  body {\r\n    max-width: 1200px;\r\n    margin: auto;\r\n  }\r\n\r\n}\r\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;EACV,sBAAsB;EACtB,cAAc;AAChB;;AAEA;EACE,iCAAiC;EACjC,yBAAyB;AAC3B;;AAEA;EACE,yBAAyB;EACzB,iBAAiB;EACjB,aAAa;EACb,sBAAsB;EACtB,8BAA8B;AAChC;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;EACnB,2BAA2B;AAC7B;;AAEA;EACE,2BAA2B;EAC3B,gCAAgC;AAClC;;AAEA;EACE,iBAAiB;EACjB,gBAAgB;EAChB,kBAAkB;EAClB,gBAAgB;AAClB;;AAEA;EACE,eAAe;EACf,mBAAmB;AACrB;;AAEA;;;EAGE,yBAAyB;AAC3B;;AAEA;EACE,6BAA6B;EAC7B,yBAAyB;EACzB,iBAAiB;EACjB,kCAAkC;AACpC;;AAEA;EACE,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;EACnB,eAAe;EACf,WAAW;EACX,gBAAgB;EAChB,YAAY;EACZ,qBAAqB;AACvB;;AAEA;;EAEE,kBAAkB;AACpB;;AAEA;EACE,WAAW;EACX,gBAAgB;AAClB;;AAEA;EACE,iBAAiB;EACjB,iBAAiB;EACjB,kCAAkC;AACpC;;AAEA;EACE,yBAAyB;AAC3B;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,qBAAqB;AACvB;;AAEA;EACE,kCAAkC;AACpC;;AAEA;EACE,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,cAAc;EACd,cAAc;EACd,kBAAkB;AACpB;;AAEA;EACE,0BAA0B;AAC5B;;AAEA;EACE,oBAAoB;AACtB;;AAEA;EACE,cAAc;EACd,YAAY;EACZ,iBAAiB;EACjB,UAAU;EACV,kBAAkB;AACpB;;AAEA;EACE,UAAU;AACZ;;AAEA;EACE,iBAAiB;EACjB,6BAA6B;EAC7B,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB,SAAS;AACX;;AAEA;EACE,cAAc;EACd,YAAY;AACd;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE;IACE,iBAAiB;IACjB,YAAY;EACd;;EAEA;IACE,mBAAmB;IACnB,uBAAuB;IACvB,QAAQ;IACR,aAAa;EACf;;EAEA;IACE,YAAY;IACZ,aAAa;EACf;;EAEA;IACE,iBAAiB;IACjB,gBAAgB;IAChB,kBAAkB;EACpB;;EAEA;IACE,iBAAiB;EACnB;AACF","sourcesContent":["* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n  color: #5e574b;\r\n}\r\n\r\n.mulish {\r\n  font-family: 'Mulish', sans-serif;\r\n  text-transform: uppercase;\r\n}\r\n\r\nbody {\r\n  background-color: #f7f4ee;\r\n  min-height: 100vh;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: space-between;\r\n}\r\n\r\nmain {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  padding: 2rem 0.8rem 0.8rem;\r\n}\r\n\r\nheader {\r\n  padding: 2rem 0.8rem 1.8rem;\r\n  border-bottom: 1px solid #b4ae9e;\r\n}\r\n\r\nh1 {\r\n  font-size: 2.5rem;\r\n  line-height: 1em;\r\n  text-align: center;\r\n  font-weight: 200;\r\n}\r\n\r\nh2 {\r\n  font-size: 1rem;\r\n  letter-spacing: 2px;\r\n}\r\n\r\ninput,\r\nbutton,\r\nul {\r\n  border: 1px solid #b4ae9e;\r\n}\r\n\r\nbutton {\r\n  background-color: transparent;\r\n  text-transform: uppercase;\r\n  padding: 3px 12px;\r\n  font-family: 'Poppins', sans-serif;\r\n}\r\n\r\n#board-section {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  flex-wrap: wrap;\r\n  width: 100%;\r\n  max-width: 400px;\r\n  margin: auto;\r\n  margin-bottom: 2.5rem;\r\n}\r\n\r\nul,\r\nform {\r\n  margin-top: 1.2rem;\r\n}\r\n\r\nul {\r\n  width: 100%;\r\n  list-style: none;\r\n}\r\n\r\nli {\r\n  font-size: 0.8rem;\r\n  padding: 5px 11px;\r\n  font-family: 'Poppins', sans-serif;\r\n}\r\n\r\nli:nth-of-type(even) {\r\n  background-color: #fffdf9;\r\n}\r\n\r\nli .player-score {\r\n  float: right;\r\n}\r\n\r\n#form-section {\r\n  margin-bottom: 1.5rem;\r\n}\r\n\r\ninput::placeholder {\r\n  font-family: 'Poppins', sans-serif;\r\n}\r\n\r\nform {\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\ninput {\r\n  height: 1.6rem;\r\n  padding: 0 5px;\r\n  margin-bottom: 4px;\r\n}\r\n\r\ninput:focus {\r\n  outline: 2px solid #b4ae9e;\r\n}\r\n\r\n#submit-btn {\r\n  align-self: flex-end;\r\n}\r\n\r\nform span {\r\n  display: block;\r\n  height: 1rem;\r\n  font-size: 0.7rem;\r\n  opacity: 0;\r\n  margin-bottom: 8px;\r\n}\r\n\r\nform span.show {\r\n  opacity: 1;\r\n}\r\n\r\nfooter {\r\n  padding: 0.8rem 0;\r\n  border-top: 1px solid #b4ae9e;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  gap: 3rem;\r\n}\r\n\r\nfooter a {\r\n  display: block;\r\n  height: 24px;\r\n}\r\n\r\nfooter img {\r\n  color: #5e574b;\r\n}\r\n\r\n@media only screen and (min-width: 768px) {\r\n  body {\r\n    max-width: 1200px;\r\n    margin: auto;\r\n  }\r\n\r\n  main {\r\n    flex-direction: row;\r\n    justify-content: center;\r\n    gap: 15%;\r\n    padding: 3rem;\r\n  }\r\n\r\n  #board-section {\r\n    width: unset;\r\n    margin: unset;\r\n  }\r\n\r\n  h1 {\r\n    font-size: 3.5rem;\r\n    text-align: left;\r\n    padding-left: 2rem;\r\n  }\r\n\r\n  h2 {\r\n    font-size: 1.4rem;\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
