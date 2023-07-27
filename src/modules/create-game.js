@@ -11,8 +11,8 @@ fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/', {
     'Content-type': 'application/json; charset=UTF-8',
   },
 })
-  .then((response) => response.json())
-  .then((json) => console.log(json));
+  .then((response) => response.json());
+// .then((json) => console.log(json));
 
 const URL = 'ftUbbpQXGg2o6gbJXzei';
 export default URL;
